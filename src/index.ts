@@ -15,7 +15,6 @@ export default function eslintConfig(opts: Options) {
       ignores: ["dist/", "node_modules/**/*", "coverage/**/*"],
       plugins: {
         "@stylistic": stylistic,
-        unicorn: eslintPluginUnicorn,
       },
       // @ts-ignore
       rules: {
