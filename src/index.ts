@@ -1,6 +1,5 @@
-import { config } from "typescript-eslint";
+import { config, parser, plugin } from "typescript-eslint";
 import stylistic, { Rules } from "@stylistic/eslint-plugin";
-import tseslint from "typescript-eslint";
 // @ts-ignore
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 
@@ -15,6 +14,11 @@ export default function eslintConfig(opts: Options) {
       ignores: ["dist/", "node_modules/**/*", "coverage/**/*"],
       plugins: {
         "@stylistic": stylistic,
+        "@typescript-eslint": plugin,
+      },
+      languageOptions: {
+        parser,
+        sourceType: "module",
       },
       // @ts-ignore
       rules: {
