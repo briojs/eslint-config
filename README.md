@@ -1,4 +1,4 @@
-## Ndst
+## 🖨️ eslint-config-briojs
 
 [![npm version](https://img.shields.io/npm/v/eslint-config-briojs?color=yellow)](https://npmjs.com/package/eslint-config-briojs)
 [![npm downloads](https://img.shields.io/npm/dm/eslint-config-briojs?color=yellow)](https://npmjs.com/package/eslint-config-briojs)
