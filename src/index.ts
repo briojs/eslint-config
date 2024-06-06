@@ -37,6 +37,7 @@ export default function eslintConfig(opts: Options) {
         "unicorn/no-process-exit": "off",
         "unicorn/consistent-destructuring": "off",
         "unicorn/no-array-reduce": "off",
+        "unicorn/prevent-abbreviations": "off",
         "require-await": "off",
         "multiline-ternary": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
