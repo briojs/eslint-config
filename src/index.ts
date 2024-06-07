@@ -47,7 +47,6 @@ export default function eslintConfig(opts: Options) {
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-empty-function": "off",
       "@typescript-eslint/ban-ts-comment": "error",
-      "@typescript-eslint/ban-types": "error",
       "no-array-constructor": "off",
       "@typescript-eslint/no-array-constructor": "error",
       "@typescript-eslint/no-duplicate-enum-values": "error",
@@ -64,6 +63,8 @@ export default function eslintConfig(opts: Options) {
       "@typescript-eslint/no-var-requires": "error",
       "@typescript-eslint/prefer-as-const": "error",
       "@typescript-eslint/triple-slash-reference": "error",
+      "@typescript-eslint/ban-types": "off",
+      "unicorn/no-nested-ternary": "off",
       ...opts.rules,
     } as Rules,
   });
