@@ -1,7 +1,7 @@
-import { config, parser, plugin } from "typescript-eslint";
 import stylistic, { Rules } from "@stylistic/eslint-plugin";
 // @ts-ignore
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
+import { config, parser, plugin } from "typescript-eslint";
 
 export interface Options {
   rules?: Rules;
@@ -65,6 +65,7 @@ export default function eslintConfig(opts: Options) {
       "@typescript-eslint/triple-slash-reference": "error",
       "@typescript-eslint/ban-types": "off",
       "unicorn/no-nested-ternary": "off",
+      "unicorn/import-style": "off",
       ...opts.rules,
     } as Rules,
   });
