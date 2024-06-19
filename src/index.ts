@@ -1,58 +1,3 @@
-// // @ts-ignore
-// import eslintPluginUnicorn from "eslint-plugin-unicorn";
-// import { config, parser, plugin } from "typescript-eslint";
-//
-// export interface Options {
-//   rules?: Rules;
-//   ignores?: string[];
-// }
-//
-// export default function eslintConfig(opts: Options) {
-//   return config(eslintPluginUnicorn.configs["flat/recommended"], {
-//     files: ["**/*.ts"],
-//     ignores: ["dist", "node_modules", "coverage", ...(opts.ignores || [])],
-//     plugins: {
-//       "@stylistic": stylistic,
-//       "@typescript-eslint": plugin,
-//     },
-//     languageOptions: {
-//       parser,
-//       sourceType: "module",
-//     },
-//     // @ts-ignore
-//     rules: {
-
-//       "@typescript-eslint/no-non-null-assertion": 0,
-//       "@typescript-eslint/no-unused-vars": [
-//         "warn",
-//         { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
-//       ],
-//       "@typescript-eslint/no-explicit-any": "off",
-//       "@typescript-eslint/no-empty-function": "off",
-//       "@typescript-eslint/ban-ts-comment": 2,
-//       "no-array-constructor": "off",
-//       "@typescript-eslint/no-array-constructor": 2,
-//       "@typescript-eslint/no-duplicate-enum-values": 2,
-//       "@typescript-eslint/no-extra-non-null-assertion": 2,
-//       "no-loss-of-precision": "off",
-//       "@typescript-eslint/no-loss-of-precision": 2,
-//       "@typescript-eslint/no-misused-new": 2,
-//       "@typescript-eslint/no-namespace": 2,
-//       "@typescript-eslint/no-non-null-asserted-optional-chain": 2,
-//       "@typescript-eslint/no-this-alias": 2,
-//       "@typescript-eslint/no-unnecessary-type-constraint": 2,
-//       "@typescript-eslint/no-unsafe-declaration-merging": 2,
-//       "no-unused-vars": "off",
-//       "@typescript-eslint/no-var-requires": 2,
-//       "@typescript-eslint/prefer-as-const": 2,
-//       "@typescript-eslint/triple-slash-reference": 2,
-//       "@typescript-eslint/ban-types": "off",
-
-//       ...opts.rules,
-//     } as Rules,
-//   });
-// }
-
 import eslint from "@eslint/js";
 import type { Linter } from "eslint";
 // @ts-ignore
@@ -89,6 +34,7 @@ export default function eslintConfig(
     "unicorn/import-style": 0,
     "unicorn/no-static-only-class": 0,
     "unicorn/prefer-spread": 0,
+    "unicorn/no-object-as-default-parameter": 0,
     "unicorn/no-null": 0,
     "unicorn/no-process-exit": 0,
     "unicorn/consistent-destructuring": 0,

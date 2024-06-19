@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-briojs",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Shared eslint config for all BrioJS projects",
   "license": "MIT",
   "type": "module",
