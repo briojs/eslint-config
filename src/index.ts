@@ -5,12 +5,13 @@ import { config, parser, plugin } from "typescript-eslint";
 
 export interface Options {
   rules?: Rules;
+  ignores?: string[];
 }
 
 export default function eslintConfig(opts: Options) {
   return config(eslintPluginUnicorn.configs["flat/recommended"], {
     files: ["**/*.ts"],
-    ignores: ["dist/**/*", "node_modules/**/*", "coverage/**/*"],
+    ignores: ["dist", "node_modules", "coverage", ...(opts.ignores || [])],
     plugins: {
       "@stylistic": stylistic,
       "@typescript-eslint": plugin,
