@@ -10,7 +10,7 @@ export interface Options {
 export default function eslintConfig(opts: Options) {
   return config(eslintPluginUnicorn.configs["flat/recommended"], {
     files: ["**/*.ts"],
-    ignores: ["dist/", "node_modules/**/*", "coverage/**/*"],
+    ignores: ["dist/**/*", "node_modules/**/*", "coverage/**/*"],
     plugins: {
       "@stylistic": stylistic,
       "@typescript-eslint": plugin,
@@ -66,6 +66,8 @@ export default function eslintConfig(opts: Options) {
       "@typescript-eslint/ban-types": "off",
       "unicorn/no-nested-ternary": "off",
       "unicorn/import-style": "off",
+      "unicorn/no-static-only-class": "off",
+      "unicorn/prefer-spread": "off",
       ...opts.rules,
     } as Rules,
   });
