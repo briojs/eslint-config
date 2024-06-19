@@ -1,4 +1,5 @@
 import eslint from "@eslint/js";
+import stylistic from "@stylistic/eslint-plugin";
 import type { Linter } from "eslint";
 // @ts-ignore
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
@@ -71,6 +72,11 @@ export default function eslintConfig(
   return [
     eslint.configs.recommended,
     ...(tseslint.configs.recommended as Linter.FlatConfig[]),
+    {
+      plugins: {
+        "@stylistic": stylistic,
+      },
+    },
     eslintPluginUnicorn.configs["flat/recommended"] as Linter.FlatConfig,
 
     // Preset overrides
